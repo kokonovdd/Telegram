@@ -186,17 +186,17 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
              cancellationToken: cancellationToken);
         }
 
-        //if (messageText == "video")
-        //{
-        //    Message message = await botClient.SendVideoAsync(
-        //    chatId: chatId,
-        //    video: "https://github.com/kokonovdd/Telegram/raw/master/Files/waves.mp4",
-        //    thumb: "https://github.com/kokonovdd/Telegram/raw/master/Files/1.jpg",
-        //    supportsStreaming: true,
-        //    cancellationToken: cancellationToken);
-        //}
+	if (messageText == "video")
+	{
+		Message message = await botClient.SendVideoAsync(
+		chatId: chatId,
+		video: "https://github.com/kokonovdd/Telegram/raw/master/Files/qwerty.mp4",
+		thumb: "https://github.com/kokonovdd/Telegram/raw/master/Files/1.jpg",
+		supportsStreaming: true,
+		cancellationToken: cancellationToken);
+	}
 
-        if (messageText == "album")
+	if (messageText == "album")
         {
             Message[] messages = await botClient.SendMediaGroupAsync(
             chatId: chatId,
@@ -225,8 +225,8 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
             //Use sendAnimation method to send animation files(GIF or H.264 / MPEG - 4 AVC video without sound).
             Message message = await botClient.SendAnimationAsync(
             chatId: chatId,
-            animation: "",
-            caption: "",
+            animation: "https://github.com/kokonovdd/Telegram/raw/master/Files/qwerty.mp4",
+            caption: "Спокойная",
             cancellationToken: cancellationToken);
         }
 
@@ -267,12 +267,12 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
             cancellationToken: cancellationToken);
         }
 
-        if (messageText == "roma location")
+        if (messageText == "rome location")
         {
             Message message = await botClient.SendVenueAsync(
                 chatId: chatId,
-                latitude: 41.9027835f,
-                longitude: 12.4963655,
+                latitude: 41.9110547f,
+                longitude: 12.4975507,
                 title: "Rome",
                 address: "Italy, Rome",
                 cancellationToken: cancellationToken);
