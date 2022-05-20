@@ -182,19 +182,19 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
         {
             Message message = await botClient.SendAudioAsync(
              chatId: chatId,
-             audio: "",
+             audio: "https://github.com/kokonovdd/Telegram/raw/master/Files/Attack_on_Titan_-_Guren_no_Yumiya_(Gingertail_Cover).mp3",
              cancellationToken: cancellationToken);
         }
 
-        if (messageText == "Video")
-        {
-            Message message = await botClient.SendVideoAsync(
-            chatId: chatId,
-            video: "",
-            thumb: "",
-            supportsStreaming: true,
-            cancellationToken: cancellationToken);
-        }
+        //if (messageText == "video")
+        //{
+        //    Message message = await botClient.SendVideoAsync(
+        //    chatId: chatId,
+        //    video: "https://github.com/kokonovdd/Telegram/raw/master/Files/waves.mp4",
+        //    thumb: "https://github.com/kokonovdd/Telegram/raw/master/Files/1.jpg",
+        //    supportsStreaming: true,
+        //    cancellationToken: cancellationToken);
+        //}
 
         if (messageText == "album")
         {
@@ -202,8 +202,9 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
             chatId: chatId,
             media: new IAlbumInputMedia[]
             {
-                new InputMediaPhoto(""),
-                new InputMediaPhoto(""),
+                new InputMediaPhoto("https://github.com/kokonovdd/Telegram/raw/master/Files/1.jpg"),
+                new InputMediaPhoto("https://github.com/kokonovdd/Telegram/raw/master/Files/2.jpg"),
+                new InputMediaPhoto("https://github.com/kokonovdd/Telegram/raw/master/Files/3.jpg"),
             },
             cancellationToken: cancellationToken);
         }
@@ -213,8 +214,8 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
             //Use sendDocument method to send general files.
             Message message = await botClient.SendDocumentAsync(
             chatId: chatId,
-            document: "",
-            caption: "",
+            document: "https://github.com/kokonovdd/Telegram/raw/master/Files/1.jpg",
+            caption: "<b>Ara bird</b>. <i>Source</i>: <a href=\"https://pixabay.com\">Pixabay</a>",
             parseMode: ParseMode.Html,
             cancellationToken: cancellationToken);
         }
