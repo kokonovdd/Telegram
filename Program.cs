@@ -186,7 +186,7 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
              cancellationToken: cancellationToken);
         }
 
-        if (messageText == "countdown")
+        if (messageText == "Video")
         {
             Message message = await botClient.SendVideoAsync(
             chatId: chatId,
@@ -273,7 +273,7 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
                 latitude: 41.9027835f,
                 longitude: 12.4963655,
                 title: "Rome",
-                address: "",
+                address: "Italy, Rome",
                 cancellationToken: cancellationToken);
         }
 
@@ -281,8 +281,8 @@ async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, Cancel
         {
             Message message = await botClient.SendLocationAsync(
                 chatId: chatId,
-                latitude: 123,
-                longitude: 123,
+                latitude: 56.3476781f,
+                longitude: 53.1257704,
                 cancellationToken: cancellationToken);
         }
     }
